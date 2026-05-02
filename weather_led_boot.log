@@ -1,0 +1,1809 @@
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=12, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-04-30T21:00 | code=0 | condition=sunny | precip_prob=4% | temp=11.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Quiet hours active. LEDs off. Quiet window: 22:00 to 7:00.
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=7.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=7.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+-----------------------------
+Launcher started at Fri  1 May 07:21:01 EDT 2026
+After boot delay at Fri  1 May 07:22:31 EDT 2026
+Launching LED script with nohup at Fri  1 May 07:22:33 EDT 2026
+Spawned PID 2063
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=12, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=7.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+-----------------------------
+Launcher started at Fri  1 May 07:33:24 EDT 2026
+After boot delay at Fri  1 May 07:34:54 EDT 2026
+Launching LED script with nohup at Fri  1 May 07:34:56 EDT 2026
+Spawned PID 2440
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=7.0
+Running animation: sunny
+-----------------------------
+Launcher started at Fri  1 May 07:35:14 EDT 2026
+-----------------------------
+Launcher started at Fri  1 May 07:36:30 EDT 2026
+After boot delay at Fri  1 May 07:38:21 EDT 2026
+Launching LED script with nohup at Fri  1 May 07:38:23 EDT 2026
+Spawned PID 1298
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=6.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T07:00 | code=0 | condition=sunny | precip_prob=0% | temp=6.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T08:00 | code=0 | condition=sunny | precip_prob=0% | temp=8.8
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T08:00 | code=0 | condition=sunny | precip_prob=0% | temp=8.8
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T08:00 | code=0 | condition=sunny | precip_prob=0% | temp=8.8
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T08:00 | code=0 | condition=sunny | precip_prob=0% | temp=8.8
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T09:00 | code=0 | condition=sunny | precip_prob=0% | temp=10.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T09:00 | code=0 | condition=sunny | precip_prob=0% | temp=10.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T09:00 | code=0 | condition=sunny | precip_prob=0% | temp=10.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T09:00 | code=0 | condition=sunny | precip_prob=0% | temp=10.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T10:00 | code=0 | condition=sunny | precip_prob=0% | temp=11.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T10:00 | code=0 | condition=sunny | precip_prob=0% | temp=11.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T10:00 | code=0 | condition=sunny | precip_prob=0% | temp=11.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T10:00 | code=0 | condition=sunny | precip_prob=0% | temp=12.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+-----------------------------
+Launcher started at Fri  1 May 10:55:44 EDT 2026
+After boot delay at Fri  1 May 10:59:01 EDT 2026
+Launching LED script with nohup at Fri  1 May 10:59:03 EDT 2026
+Spawned PID 1305
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T10:00 | code=0 | condition=sunny | precip_prob=0% | temp=12.0
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+                         -----------------------------
+Launcher started at Fri  1 May 11:03:44 EDT 2026
+After boot delay at Fri  1 May 11:30:37 EDT 2026
+Launching LED script with nohup at Fri  1 May 11:30:40 EDT 2026
+Spawned PID 1297
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=80, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T11:00 | code=0 | condition=sunny | precip_prob=0% | temp=13.3
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T11:00 | code=0 | condition=sunny | precip_prob=0% | temp=13.3
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T12:00 | code=0 | condition=sunny | precip_prob=0% | temp=14.7
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T12:00 | code=0 | condition=sunny | precip_prob=0% | temp=14.7
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T12:00 | code=0 | condition=sunny | precip_prob=0% | temp=14.7
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T12:00 | code=0 | condition=sunny | precip_prob=0% | temp=14.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T13:00 | code=0 | condition=sunny | precip_prob=0% | temp=16.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T13:00 | code=0 | condition=sunny | precip_prob=0% | temp=16.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T13:00 | code=0 | condition=sunny | precip_prob=0% | temp=16.4
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T13:00 | code=0 | condition=sunny | precip_prob=0% | temp=15.9
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T14:00 | code=0 | condition=sunny | precip_prob=0% | temp=17.2
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T14:00 | code=0 | condition=sunny | precip_prob=0% | temp=17.2
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Next hour: 2026-05-01T14:00 | code=0 | condition=sunny | precip_prob=0% | temp=17.2
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+Running animation: sunny
+-----------------------------
+Launcher started at Fri  1 May 14:42:49 EDT 2026
+After boot delay at Fri  1 May 14:44:40 EDT 2026
+Launching LED script with nohup at Fri  1 May 14:44:42 EDT 2026
+Spawned PID 1262
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=255, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T14:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+-----------------------------
+Launcher started at Fri  1 May 15:07:52 EDT 2026
+After boot delay at Fri  1 May 15:09:43 EDT 2026
+Launching LED script with nohup at Fri  1 May 15:09:45 EDT 2026
+Spawned PID 1285
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=255, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Next hour: 2026-05-01T15:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T15:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T15:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T15:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T16:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=18.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T16:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=18.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T16:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=18.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T16:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=18.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T17:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.7
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T17:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.7
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T17:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=17.7
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T17:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=15.2
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T18:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=13.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T18:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=13.9
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T18:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=14.4
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T18:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=14.4
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T19:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=1% | temp=13.1
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T19:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=1% | temp=13.1
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T19:00 | code=0 | condition=sunny | mode=day | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=13.1
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Running animation: sunny / day
+Next hour: 2026-05-01T19:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=13.2
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T20:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=11.6
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T20:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=11.6
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T20:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=11.6
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T20:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=11.6
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T21:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=10.9
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Next hour: 2026-05-01T21:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=10.9
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+TEST MODE active: condition=storm, is_night=True, precip_prob=80
+Running animation: storm / night
+TEST MODE active: condition=storm, is_night=True, precip_prob=80
+Running animation: storm / night
+TEST MODE active: condition=fog, is_night=True, precip_prob=0
+Running animation: fog / night
+TEST MODE active: condition=snow, is_night=True, precip_prob=0
+Running animation: snow / night
+TEST MODE active: condition=drizzle, is_night=True, precip_prob=35
+Running animation: drizzle / night
+TEST MODE active: condition=rain, is_night=True, precip_prob=80
+Running animation: rain / night
+TEST MODE active: condition=rain, is_night=True, precip_prob=80
+Running animation: rain / night
+TEST MODE active: condition=rain, is_night=True, precip_prob=80
+Running animation: rain / night
+TEST MODE active: condition=cloudy, is_night=True, precip_prob=0
+Running animation: cloudy / night
+TEST MODE active: condition=cloudy, is_night=True, precip_prob=0
+Running animation: cloudy / night
+TEST MODE active: condition=cloudy, is_night=True, precip_prob=0
+Running animation: cloudy / night
+TEST MODE active: condition=cloudy, is_night=True, precip_prob=0
+Running animation: cloudy / night
+Next hour: 2026-05-01T21:00 | code=0 | condition=sunny | mode=night | sunrise=2026-05-01T05:52:00 | sunset=2026-05-01T19:51:00 | precip_prob=0% | temp=10.9
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+Running animation: sunny / night
+-----------------------------
+Launcher started at Fri  1 May 21:58:09 EDT 2026
+After boot delay at Fri  1 May 22:00:01 EDT 2026
+Launching LED script with nohup at Fri  1 May 22:00:04 EDT 2026
+Spawned PID 1311
+Starting weather LED strip...
+Press Ctrl+C to stop.
+Loaded config: LED_COUNT=60, LED_PIN=18, BRIGHTNESS=255, LAT=40.856202, LON=-73.793085, QUIET=True, QUIET_START=22, QUIET_END=7
+Quiet hours active. LEDs off. Quiet window: 22:00 to 7:00. Exiting until next scheduled start.
