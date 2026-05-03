@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import subprocess
 from pathlib import Path
 from flask import Flask, request, redirect, render_template_string
 
@@ -803,6 +804,24 @@ def save_config(config):
         json.dump(config, f, indent=2)
 
 
+def sync_cron_schedule():
+    try:
+        result = subprocess.run(
+            ["sudo", "/home/matt/update_weather_led_cron.sh"],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        if result.returncode != 0:
+            print("Cron sync failed:", result.stderr, flush=True)
+            return False
+        print("Cron sync success:", result.stdout, flush=True)
+        return True
+    except Exception as e:
+        print(f"Cron sync exception: {e}", flush=True)
+        return False
+
+
 def as_bool(value):
     return value == "true"
 
@@ -840,6 +859,9 @@ def index():
             config["quiet_hours_enabled"] = as_bool(request.form["quiet_hours_enabled"])
             config["quiet_start_hour"] = int(request.form["quiet_start_hour"])
             config["quiet_end_hour"] = int(request.form["quiet_end_hour"])
+            save_config(config)
+            sync_cron_schedule()
+            return redirect("/")
 
         elif action == "save_advanced":
             config["led_count"] = int(request.form["led_count"])
