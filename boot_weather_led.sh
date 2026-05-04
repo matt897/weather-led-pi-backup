@@ -1,6 +1,14 @@
 #!/bin/bash
 
 LOG="/home/matt/weather_led_boot.log"
+LOCK="/tmp/weather_led_launcher.lock"
+
+exec 9>"$LOCK"
+if ! flock -n 9; then
+  echo "-----------------------------" >> "$LOG"
+  echo "Launcher already running at $(date); exiting." >> "$LOG"
+  exit 0
+fi
 
 echo "-----------------------------" >> "$LOG"
 echo "Launcher started at $(date)" >> "$LOG"

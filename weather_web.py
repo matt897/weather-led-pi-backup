@@ -585,10 +585,16 @@ HTML = """
         </div>
     </section>
 
+    {% if cron_sync_error %}
+    <section class="warning">
+        Settings were saved, but cron schedule sync failed. The LED process will still enforce quiet hours; check the web app logs for sudo or cron details.
+    </section>
+    {% endif %}
+
     <section class="card">
         <h2>Control Source</h2>
         <p class="note">
-            Live Weather follows the forecast and quiet hours. Test Mode lets you preview any animation.
+            Live Weather follows the forecast and quiet hours. Test Mode lets you preview animations outside quiet hours.
         </p>
 
         <div class="segmented">
@@ -813,7 +819,11 @@ def sync_cron_schedule():
             timeout=10
         )
         if result.returncode != 0:
-            print("Cron sync failed:", result.stderr, flush=True)
+            print(
+                f"Cron sync failed with exit code {result.returncode}. "
+                f"stdout={result.stdout!r} stderr={result.stderr!r}",
+                flush=True
+            )
             return False
         print("Cron sync success:", result.stdout, flush=True)
         return True
@@ -829,6 +839,7 @@ def as_bool(value):
 @app.route("/", methods=["GET", "POST"])
 def index():
     config = load_config()
+    cron_sync_error = request.args.get("cron_sync") == "failed"
 
     if request.method == "POST":
         action = request.form.get("action", "")
@@ -860,7 +871,8 @@ def index():
             config["quiet_start_hour"] = int(request.form["quiet_start_hour"])
             config["quiet_end_hour"] = int(request.form["quiet_end_hour"])
             save_config(config)
-            sync_cron_schedule()
+            if not sync_cron_schedule():
+                return redirect("/?cron_sync=failed")
             return redirect("/")
 
         elif action == "save_advanced":
@@ -878,6 +890,7 @@ def index():
     return render_template_string(
         HTML,
         config=config,
+        cron_sync_error=cron_sync_error,
         weather_cards=WEATHER_CARDS
     )
 

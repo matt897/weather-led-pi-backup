@@ -1,36 +1,31 @@
 #!/bin/bash
 
-CONFIG="/home/matt/weather_led_config.json"
-BOOT_SCRIPT="/home/matt/boot_weather_led.sh"
+CONFIG="${WEATHER_LED_CONFIG:-/home/matt/weather_led_config.json}"
+BOOT_SCRIPT="${WEATHER_LED_BOOT_SCRIPT:-/home/matt/boot_weather_led.sh}"
+PYTHON_BIN="${WEATHER_LED_PYTHON:-/home/matt/weatherled-venv/bin/python}"
+DRY_RUN="${WEATHER_LED_CRON_DRY_RUN:-false}"
 
 if [ ! -f "$CONFIG" ]; then
   echo "Config file not found: $CONFIG"
   exit 1
 fi
 
-QUIET_ENABLED=$(/home/matt/weatherled-venv/bin/python - <<'PY'
+CONFIG_VALUES=$("$PYTHON_BIN" - "$CONFIG" <<'PY'
 import json
-with open("/home/matt/weather_led_config.json") as f:
+import sys
+
+with open(sys.argv[1]) as f:
     c = json.load(f)
+
 print(str(c.get("quiet_hours_enabled", True)).lower())
-PY
-)
-
-QUIET_START=$(/home/matt/weatherled-venv/bin/python - <<'PY'
-import json
-with open("/home/matt/weather_led_config.json") as f:
-    c = json.load(f)
 print(int(c.get("quiet_start_hour", 22)))
-PY
-)
-
-QUIET_END=$(/home/matt/weatherled-venv/bin/python - <<'PY'
-import json
-with open("/home/matt/weather_led_config.json") as f:
-    c = json.load(f)
 print(int(c.get("quiet_end_hour", 7)))
 PY
 )
+
+QUIET_ENABLED=$(printf '%s\n' "$CONFIG_VALUES" | sed -n '1p')
+QUIET_START=$(printf '%s\n' "$CONFIG_VALUES" | sed -n '2p')
+QUIET_END=$(printf '%s\n' "$CONFIG_VALUES" | sed -n '3p')
 
 if [ "$QUIET_START" -lt 0 ] || [ "$QUIET_START" -gt 23 ]; then
   echo "Invalid quiet_start_hour: $QUIET_START"
@@ -51,12 +46,16 @@ TMP_CRON=$(mktemp)
 
   if [ "$QUIET_ENABLED" = "true" ]; then
     echo "0 $QUIET_END * * * $BOOT_SCRIPT"
-    echo "0 $QUIET_START * * * pkill -f /home/matt/weather_led_strip.py"
   fi
 } > "$TMP_CRON"
 
-crontab "$TMP_CRON"
-rm "$TMP_CRON"
+if [ "$DRY_RUN" = "true" ]; then
+  echo "Dry-run cron:"
+  cat "$TMP_CRON"
+else
+  crontab "$TMP_CRON"
+  echo "Updated root cron:"
+  crontab -l
+fi
 
-echo "Updated root cron:"
-crontab -l
+rm "$TMP_CRON"

@@ -6,6 +6,8 @@ import random
 import signal
 import sys
 import json
+import os
+import fcntl
 from pathlib import Path
 from datetime import datetime
 
@@ -18,6 +20,8 @@ from rpi_ws281x import PixelStrip, Color
 # -----------------------------
 
 CONFIG_PATH = Path("/home/matt/weather_led_config.json")
+INSTANCE_LOCK_PATH = Path("/tmp/weather_led_strip.lock")
+INSTANCE_LOCK_FILE = None
 
 
 def load_config():
@@ -80,21 +84,49 @@ QUIET_END_HOUR = int(CONFIG["quiet_end_hour"])
 QUIET_CHECK_SECONDS = int(CONFIG["quiet_check_seconds"])
 
 
+strip = None
+
+
 # -----------------------------
-# LED SETUP
+# PROCESS / LED SETUP
 # -----------------------------
 
-strip = PixelStrip(
-    LED_COUNT,
-    LED_PIN,
-    LED_FREQ_HZ,
-    LED_DMA,
-    LED_INVERT,
-    LED_BRIGHTNESS,
-    LED_CHANNEL
-)
+def acquire_instance_lock():
+    global INSTANCE_LOCK_FILE
 
-strip.begin()
+    INSTANCE_LOCK_FILE = INSTANCE_LOCK_PATH.open("a+")
+    try:
+        fcntl.flock(INSTANCE_LOCK_FILE, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        print(
+            f"Another weather LED strip process already holds {INSTANCE_LOCK_PATH}. Exiting.",
+            flush=True
+        )
+        sys.exit(0)
+
+    INSTANCE_LOCK_FILE.seek(0)
+    INSTANCE_LOCK_FILE.truncate()
+    INSTANCE_LOCK_FILE.write(str(os.getpid()))
+    INSTANCE_LOCK_FILE.flush()
+
+
+def init_led_strip():
+    global strip
+
+    if strip is not None:
+        return
+
+    strip = PixelStrip(
+        LED_COUNT,
+        LED_PIN,
+        LED_FREQ_HZ,
+        LED_DMA,
+        LED_INVERT,
+        LED_BRIGHTNESS,
+        LED_CHANNEL
+    )
+
+    strip.begin()
 
 
 # -----------------------------
@@ -106,6 +138,9 @@ def rgb(r, g, b):
 
 
 def set_all(color):
+    if strip is None:
+        return
+
     for i in range(LED_COUNT):
         strip.setPixelColor(i, color)
     strip.show()
@@ -115,24 +150,9 @@ def clear():
     set_all(rgb(0, 0, 0))
 
 
-def is_quiet_hours():
-    """
-    Returns True when current local time is inside quiet hours.
-
-    Handles:
-    - Overnight windows like 22 to 7
-    - Same-day windows like 13 to 16
-    """
-    runtime_config = load_config()
-
-    quiet_enabled = bool(runtime_config.get("quiet_hours_enabled", QUIET_HOURS_ENABLED))
-    quiet_start = int(runtime_config.get("quiet_start_hour", QUIET_START_HOUR))
-    quiet_end = int(runtime_config.get("quiet_end_hour", QUIET_END_HOUR))
-
+def quiet_hours_active(quiet_enabled, quiet_start, quiet_end, current_hour):
     if not quiet_enabled:
         return False
-
-    current_hour = datetime.now().hour
 
     if quiet_start == quiet_end:
         return False
@@ -141,6 +161,27 @@ def is_quiet_hours():
         return quiet_start <= current_hour < quiet_end
 
     return current_hour >= quiet_start or current_hour < quiet_end
+
+
+def is_quiet_hours(runtime_config=None, now=None):
+    """
+    Returns True when current local time is inside quiet hours.
+
+    Handles:
+    - Overnight windows like 22 to 7
+    - Same-day windows like 13 to 16
+    """
+    if runtime_config is None:
+        runtime_config = load_config()
+
+    quiet_enabled = bool(runtime_config.get("quiet_hours_enabled", QUIET_HOURS_ENABLED))
+    quiet_start = int(runtime_config.get("quiet_start_hour", QUIET_START_HOUR))
+    quiet_end = int(runtime_config.get("quiet_end_hour", QUIET_END_HOUR))
+
+    if now is None:
+        now = datetime.now()
+
+    return quiet_hours_active(quiet_enabled, quiet_start, quiet_end, now.hour)
 
 
 # -----------------------------
@@ -837,6 +878,9 @@ signal.signal(signal.SIGTERM, shutdown_handler)
 
 
 def main():
+    acquire_instance_lock()
+    init_led_strip()
+
     print("Starting weather LED strip...", flush=True)
     print("Press Ctrl+C to stop.", flush=True)
 
@@ -855,17 +899,41 @@ def main():
 
     current_weather = None
     last_weather_fetch = 0
+    quiet_logged = False
 
     while True:
         runtime_config = load_config()
 
-        quiet_enabled = bool(runtime_config.get("quiet_hours_enabled", QUIET_HOURS_ENABLED))
         quiet_start = int(runtime_config.get("quiet_start_hour", QUIET_START_HOUR))
         quiet_end = int(runtime_config.get("quiet_end_hour", QUIET_END_HOUR))
+        quiet_check_seconds = max(
+            1,
+            int(runtime_config.get("quiet_check_seconds", QUIET_CHECK_SECONDS))
+        )
 
         test_mode_enabled = bool(runtime_config.get("test_mode_enabled", False))
 
-        # Test mode overrides quiet hours so you can preview LEDs at any time.
+        if is_quiet_hours(runtime_config):
+            clear()
+
+            if not quiet_logged:
+                print(
+                    f"Quiet hours active. LEDs off. "
+                    f"Quiet window: {quiet_start}:00 to {quiet_end}:00. "
+                    f"Checking again in {quiet_check_seconds} seconds.",
+                    flush=True
+                )
+                quiet_logged = True
+
+            time.sleep(quiet_check_seconds)
+            continue
+
+        if quiet_logged:
+            print("Quiet hours ended. Resuming weather LED animations.", flush=True)
+            current_weather = None
+            last_weather_fetch = 0
+            quiet_logged = False
+
         if test_mode_enabled:
             test_condition = runtime_config.get("test_condition", "sunny")
             test_is_night = bool(runtime_config.get("test_is_night", False))
@@ -885,27 +953,6 @@ def main():
             )
 
             continue
-
-        # Quiet hours only apply when not in test mode.
-        if quiet_enabled:
-            current_hour = datetime.now().hour
-
-            if quiet_start == quiet_end:
-                quiet_now = False
-            elif quiet_start < quiet_end:
-                quiet_now = quiet_start <= current_hour < quiet_end
-            else:
-                quiet_now = current_hour >= quiet_start or current_hour < quiet_end
-
-            if quiet_now:
-                clear()
-                print(
-                    f"Quiet hours active. LEDs off. "
-                    f"Quiet window: {quiet_start}:00 to {quiet_end}:00. "
-                    f"Exiting until next scheduled start.",
-                    flush=True
-                )
-                sys.exit(0)
 
         weather_refresh_seconds = int(runtime_config.get("weather_refresh_seconds", WEATHER_REFRESH_SECONDS))
         now = time.time()
