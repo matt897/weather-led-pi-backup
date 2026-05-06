@@ -10,6 +10,7 @@ import os
 import fcntl
 from pathlib import Path
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 from rpi_ws281x import PixelStrip, Color
@@ -222,7 +223,8 @@ def fetch_next_hour_weather():
     precip_amounts = hourly["precipitation"]
     temps = hourly["temperature_2m"]
 
-    now = datetime.now()
+    local_tz = ZoneInfo(data.get("timezone", "UTC"))
+    now = datetime.now(tz=local_tz).replace(tzinfo=None)
 
     sunrise = datetime.fromisoformat(daily["sunrise"][0])
     sunset = datetime.fromisoformat(daily["sunset"][0])
@@ -910,6 +912,11 @@ def main():
             1,
             int(runtime_config.get("quiet_check_seconds", QUIET_CHECK_SECONDS))
         )
+
+        new_brightness = int(runtime_config.get("led_brightness", LED_BRIGHTNESS))
+        if strip is not None and strip.getBrightness() != new_brightness:
+            strip.setBrightness(new_brightness)
+            strip.show()
 
         test_mode_enabled = bool(runtime_config.get("test_mode_enabled", False))
 

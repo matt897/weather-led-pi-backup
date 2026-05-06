@@ -9,7 +9,7 @@ fake_rpi = types.ModuleType("rpi_ws281x")
 
 class FakePixelStrip:
     def __init__(self, *args, **kwargs):
-        pass
+        self._brightness = args[5] if len(args) > 5 else 255
 
     def begin(self):
         pass
@@ -19,6 +19,12 @@ class FakePixelStrip:
 
     def show(self):
         pass
+
+    def getBrightness(self):
+        return self._brightness
+
+    def setBrightness(self, value):
+        self._brightness = value
 
 
 def fake_color(r, g, b):
