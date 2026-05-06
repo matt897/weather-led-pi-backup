@@ -1,0 +1,26 @@
+[Unit]
+Description=Weather LED Strip Controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/matt
+ExecStart=/home/matt/weatherled-venv/bin/python /home/matt/weather_led_strip.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/matt/weather_led_boot.log
+StandardError=append:/home/matt/weather_led_boot.log
+
+# Kill the process cleanly; give it up to 35s to finish the current animation frame.
+TimeoutStopSec=35
+KillMode=mixed
+
+# Systemd watchdog: if the process doesn't ping within 2 minutes it is considered
+# hung and will be killed then restarted automatically.
+WatchdogSec=120
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target

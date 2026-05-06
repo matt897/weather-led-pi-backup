@@ -12,8 +12,27 @@ from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+import socket
+
 import requests
 from rpi_ws281x import PixelStrip, Color
+
+
+# -----------------------------
+# SYSTEMD WATCHDOG
+# -----------------------------
+
+def systemd_watchdog_ping():
+    """Ping the systemd watchdog. No-op when not running under systemd."""
+    notify_socket = os.environ.get("NOTIFY_SOCKET")
+    if not notify_socket:
+        return
+    try:
+        with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as sock:
+            sock.connect(notify_socket)
+            sock.send(b"WATCHDOG=1")
+    except Exception:
+        pass
 
 
 # -----------------------------
@@ -999,11 +1018,18 @@ def main():
                     "is_night": False
                 }
 
-        run_animation_for_condition(
-            current_weather["condition"],
-            current_weather.get("precipitation_probability", 0),
-            current_weather.get("is_night", False)
-        )
+        systemd_watchdog_ping()
+
+        try:
+            run_animation_for_condition(
+                current_weather["condition"],
+                current_weather.get("precipitation_probability", 0),
+                current_weather.get("is_night", False)
+            )
+        except Exception as e:
+            print(f"Animation error: {e}", flush=True)
+            clear()
+            time.sleep(5)
 
 
 if __name__ == "__main__":
