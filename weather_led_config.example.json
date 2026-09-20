@@ -13,5 +13,7 @@
   "test_mode_enabled": false,
   "test_condition": "storm",
   "test_is_night": true,
-  "test_precipitation_probability": 80
+  "test_precipitation_probability": 80,
+  "kiosk_quiet_hours_enabled": true,
+  "kiosk_blank_check_seconds": 30
 }

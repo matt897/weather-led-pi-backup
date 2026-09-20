@@ -1,0 +1,17 @@
+# Blanks/unblanks the HDMI kiosk screen for quiet hours (weather_kiosk_blank.py).
+# Must run as the same user as the kiosk's Wayland session (see weather-kiosk.service),
+# since it talks to that session's compositor via wlopm.
+[Unit]
+Description=Weather Kiosk Quiet-Hours Screen Blanking
+After=weather-kiosk.service
+Requires=weather-kiosk.service
+
+[Service]
+User=matt
+Environment=WAYLAND_DISPLAY=wayland-1
+ExecStart=/home/matt/weatherled-venv/bin/python /home/matt/weather_kiosk_blank.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

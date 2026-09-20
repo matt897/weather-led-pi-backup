@@ -64,9 +64,9 @@ class NightModeTimezoneTests(unittest.TestCase):
         fake_resp = MagicMock()
         fake_resp.json.return_value = api_response
 
-        with patch("weather_led_strip.requests") as mock_requests, \
-             patch("weather_led_strip.datetime") as mock_dt, \
-             patch("weather_led_strip.load_config", return_value={"latitude": 40.856, "longitude": -73.793}):
+        with patch("weather_data.requests") as mock_requests, \
+             patch("weather_data.datetime") as mock_dt, \
+             patch("weather_data.load_config", return_value={"latitude": 40.856, "longitude": -73.793}):
 
             mock_requests.get.return_value = fake_resp
 

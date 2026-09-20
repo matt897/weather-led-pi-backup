@@ -1,32 +1,17 @@
 #!/usr/bin/env python3
 
-import json
+import time
 import subprocess
-from pathlib import Path
-from flask import Flask, request, redirect, render_template_string
+from flask import Flask, request, redirect, render_template_string, jsonify
 
-CONFIG_PATH = Path("/home/matt/weather_led_config.json")
+from weather_data import (
+    load_config,
+    save_config,
+    fetch_next_hour_weather,
+    classify_weather,
+)
 
 app = Flask(__name__)
-
-
-DEFAULT_CONFIG = {
-    "led_count": 60,
-    "led_pin": 18,
-    "led_brightness": 80,
-    "latitude": 40.856202,
-    "longitude": -73.793085,
-    "weather_refresh_seconds": 900,
-    "animation_frame_delay": 0.05,
-    "quiet_hours_enabled": True,
-    "quiet_start_hour": 22,
-    "quiet_end_hour": 7,
-    "quiet_check_seconds": 60,
-    "test_mode_enabled": False,
-    "test_condition": "sunny",
-    "test_is_night": False,
-    "test_precipitation_probability": 0
-}
 
 
 WEATHER_CARDS = [
@@ -103,6 +88,162 @@ WEATHER_CARDS = [
         "night_swatches": ["#05080f", "#2f3b4d", "#7b8794"]
     }
 ]
+
+
+WEATHER_CARDS_BY_CONDITION = {item["condition"]: item for item in WEATHER_CARDS}
+
+
+DISPLAY_HTML = """
+<!doctype html>
+<html>
+<head>
+    <title>Weather Display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        #bg {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+            background: linear-gradient(160deg, #171126, #31204e 60%, #000);
+        }
+
+        #icon {
+            font-size: 22vh;
+            line-height: 1;
+        }
+
+        #condition-title {
+            font-size: 6vh;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-top: 1vh;
+        }
+
+        #temperature {
+            font-size: 16vh;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            margin-top: 1vh;
+        }
+
+        #detail-row {
+            display: flex;
+            gap: 4vh;
+            margin-top: 3vh;
+            font-size: 2.6vh;
+            opacity: 0.85;
+        }
+
+        #clock-wrap {
+            position: fixed;
+            bottom: 4vh;
+            right: 5vh;
+            text-align: right;
+        }
+
+        #clock {
+            font-size: 4vh;
+            font-weight: 800;
+        }
+
+        #date {
+            font-size: 2vh;
+            opacity: 0.8;
+        }
+
+        #status {
+            position: fixed;
+            top: 3vh;
+            left: 5vh;
+            font-size: 1.8vh;
+            opacity: 0.55;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <div id="icon">⏳</div>
+        <div id="condition-title">Loading weather&hellip;</div>
+        <div id="temperature"></div>
+        <div id="detail-row"></div>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="clock-wrap">
+        <div id="clock"></div>
+        <div id="date"></div>
+    </div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            document.getElementById("clock").textContent = now.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"});
+            document.getElementById("date").textContent = now.toLocaleDateString([], {weekday: "long", month: "long", day: "numeric"});
+        }
+
+        function renderWeather(w) {
+            var bg = document.getElementById("bg");
+            var swatches = w.is_night ? w.night_swatches : w.day_swatches;
+
+            bg.style.background = "linear-gradient(160deg, " + swatches[0] + ", " + swatches[1] + " 55%, " + swatches[2] + ")";
+
+            document.getElementById("icon").textContent = w.icon;
+            document.getElementById("condition-title").textContent = w.title + (w.is_night ? " · Night" : " · Day");
+            document.getElementById("temperature").textContent = Math.round(w.temperature) + "°F";
+
+            var details = [];
+            if (w.precipitation_probability > 0) {
+                details.push(w.precipitation_probability + "% chance of precip");
+            }
+            if (w.sunrise && w.sunset) {
+                var sunrise = new Date(w.sunrise).toLocaleTimeString([], {hour: "numeric", minute: "2-digit"});
+                var sunset = new Date(w.sunset).toLocaleTimeString([], {hour: "numeric", minute: "2-digit"});
+                details.push("Sunrise " + sunrise + " · Sunset " + sunset);
+            }
+            document.getElementById("detail-row").textContent = details.join("   ");
+
+            document.getElementById("status").textContent = w.error ? ("Weather unavailable: " + w.error) : "";
+        }
+
+        function refreshWeather() {
+            fetch("/api/weather")
+                .then(function (res) { return res.json(); })
+                .then(renderWeather)
+                .catch(function (err) {
+                    document.getElementById("status").textContent = "Weather unavailable: " + err;
+                });
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        refreshWeather();
+        setInterval(refreshWeather, 30000);
+    </script>
+</body>
+</html>
+"""
 
 
 HTML = """
@@ -723,6 +864,28 @@ HTML = """
         </form>
     </section>
 
+    <section class="card">
+        <h2>HDMI Display</h2>
+        <p class="note">
+            The kiosk screen shows live weather at <code>/display</code>. It uses the same Quiet Hours
+            window above, but you can turn its screen-blanking on or off independently of the LEDs.
+        </p>
+
+        <form method="post">
+            <input type="hidden" name="action" value="save_hdmi">
+
+            <label>Blank Screen During Quiet Hours</label>
+            <select name="kiosk_quiet_hours_enabled">
+                <option value="true" {% if config.kiosk_quiet_hours_enabled %}selected{% endif %}>Enabled</option>
+                <option value="false" {% if not config.kiosk_quiet_hours_enabled %}selected{% endif %}>Disabled</option>
+            </select>
+
+            <button class="primary full" type="submit">Save HDMI Display Settings</button>
+        </form>
+
+        <a href="/display" target="_blank"><button class="secondary full" type="button">Preview Display</button></a>
+    </section>
+
     <details>
         <summary>Advanced Settings</summary>
 
@@ -792,24 +955,6 @@ HTML = """
 """
 
 
-def load_config():
-    if not CONFIG_PATH.exists():
-        save_config(DEFAULT_CONFIG)
-        return DEFAULT_CONFIG.copy()
-
-    with CONFIG_PATH.open("r") as f:
-        loaded = json.load(f)
-
-    config = DEFAULT_CONFIG.copy()
-    config.update(loaded)
-    return config
-
-
-def save_config(config):
-    with CONFIG_PATH.open("w") as f:
-        json.dump(config, f, indent=2)
-
-
 def sync_cron_schedule():
     try:
         result = subprocess.run(
@@ -834,6 +979,66 @@ def sync_cron_schedule():
 
 def as_bool(value):
     return value == "true"
+
+
+_weather_cache = {"data": None, "fetched_at": 0}
+
+
+def get_current_weather():
+    """Fetches and classifies the next-hour weather, cached for weather_refresh_seconds."""
+    config = load_config()
+    refresh_seconds = int(config.get("weather_refresh_seconds", 900))
+    now = time.time()
+
+    if _weather_cache["data"] is not None and now - _weather_cache["fetched_at"] < refresh_seconds:
+        return _weather_cache["data"]
+
+    try:
+        weather = fetch_next_hour_weather()
+        condition = classify_weather(
+            weather["weather_code"],
+            weather["precipitation_probability"],
+            weather["precipitation"]
+        )
+        card = WEATHER_CARDS_BY_CONDITION.get(condition, WEATHER_CARDS_BY_CONDITION["cloudy"])
+
+        data = {
+            "condition": condition,
+            "title": card["title"],
+            "icon": card["icon"],
+            "day_swatches": card["day_swatches"],
+            "night_swatches": card["night_swatches"],
+            "temperature": weather["temperature"],
+            "precipitation_probability": weather["precipitation_probability"],
+            "sunrise": weather["sunrise"],
+            "sunset": weather["sunset"],
+            "is_night": weather["is_night"],
+            "error": None
+        }
+        _weather_cache["data"] = data
+        _weather_cache["fetched_at"] = now
+        return data
+
+    except Exception as e:
+        if _weather_cache["data"] is not None:
+            stale = dict(_weather_cache["data"])
+            stale["error"] = str(e)
+            return stale
+
+        card = WEATHER_CARDS_BY_CONDITION["cloudy"]
+        return {
+            "condition": "unknown",
+            "title": card["title"],
+            "icon": card["icon"],
+            "day_swatches": card["day_swatches"],
+            "night_swatches": card["night_swatches"],
+            "temperature": 0,
+            "precipitation_probability": 0,
+            "sunrise": None,
+            "sunset": None,
+            "is_night": False,
+            "error": str(e)
+        }
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -875,6 +1080,9 @@ def index():
                 return redirect("/?cron_sync=failed")
             return redirect("/")
 
+        elif action == "save_hdmi":
+            config["kiosk_quiet_hours_enabled"] = as_bool(request.form["kiosk_quiet_hours_enabled"])
+
         elif action == "save_advanced":
             config["led_count"] = int(request.form["led_count"])
             config["led_pin"] = int(request.form["led_pin"])
@@ -895,5 +1103,15 @@ def index():
     )
 
 
+@app.route("/display")
+def display():
+    return render_template_string(DISPLAY_HTML)
+
+
+@app.route("/api/weather")
+def api_weather():
+    return jsonify(get_current_weather())
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, threaded=True)
